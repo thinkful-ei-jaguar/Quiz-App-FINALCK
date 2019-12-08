@@ -1,0 +1,31 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width:320px) {
+  .main-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: 150px; */
+  }
+  .header-texts {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+}
+
+body {
+  border: 50px solid blue;
+}
