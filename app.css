@@ -1,4 +1,4 @@
-/* Your styles should be mobile-first and responsive */
+/* Your styles should be mobile-first and responsive
 
 /** 
   * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
@@ -8,7 +8,7 @@
 */
 
 
-* {
+/* { 
   box-sizing: border-box;
 }
 
@@ -17,7 +17,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    /* padding-bottom: 150px; */
+    /* padding-bottom: 150px; 
   }
   .header-texts {
     display:flex;
@@ -28,4 +28,4 @@
 
 body {
   border: 50px solid blue;
-}
+} */

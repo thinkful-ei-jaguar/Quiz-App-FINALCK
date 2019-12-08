@@ -149,31 +149,45 @@ function renderAnswers() {
 
     const buttonHTML = 
     `<input type="button" id="next-question" aria-label="Next Question Button" value="Next Question"></input>
-     <input type="button" id="submit-button" aria-label="Submit Answer Button" value="Submit Answer"></input>`
+     <input type="button" id="submit-button" aria-label="Submit Answer Button" value="Submit Answer"></input>
+     <input type="button" id="show-results"  aria-label="Show Results Button" value="See Results"></input>`
 
     $('main').html(answersHTML.join('') + buttonHTML); 
     $('#next-question').hide()
+    $('#show-results').hide()
 };
+
+// this toggles what button the user's will see depending on where they are in the quiz. 
+function buttonToggle() {
+	$(".no-answer").remove();
+	$("#submit-button").hide();
+	  if (STORE.questionNumber < 5) {
+		$("#next-question").show();
+	} 
+  else if (STORE.questionNumber === 5) {
+		$("#show-results").show();
+	}
+}
 
 // this checks the user's answer input. if they have not answered, it prevents them from moving on in the quiz. 
 function checkAnswerInput() {
   $(".no-answer").remove();
   const selectedAnswer = $("input[name='answers']:checked").val();
-  if (selectedAnswer === undefined) {
+  if (selectedAnswer === undefined) { 
     $("#next-question").before(`<p class="no-answer">Please select an answer.</p>`);
   }
   else if (selectedAnswer === STORE.questions[STORE.questionNumber].correctAnswer) {
     questionIncrement();
     updateScore(); 
-    $("#submit-button").hide();
-    $("#next-question").show().before(`<p class="correct">Nice job! You got it right! Your current score is ${STORE.userScore} out of 5.`);
+    buttonToggle();
+    $("#next-question").before(`<p class="correct">Nice job! You got it right! Your current score is ${STORE.userScore} out of 5.`);
   }
   else if (selectedAnswer !== STORE.questions[STORE.questionNumber].correctAnswer) {
     questionIncrement(); 
-    $("#submit-button").hide();
-    $("#next-question").show().before(`<p class="incorrect">Sorry! That's incorrect. The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
+    buttonToggle(); 
+    $("#next-question").before(`<p class="incorrect">Sorry! That's incorrect. The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
     Your current score is ${STORE.userScore} out of 5.`);
-    };
+    }
   };
 
 // this loads all button interactions IMMEDIATELY so that the uer can interact with the page based on several checks.
@@ -184,9 +198,12 @@ function checkAnswerInput() {
     renderQuiz();
   });
   $(document).on("click","#submit-button",function(event) {
-    checkAnswerInput(); 
+    checkAnswerInput();
   }); 
   $(document).on("click", "#next-question", function(event) {
+    renderQuiz(); 
+  });
+  $(document).on("click","#show-results", function(event) {
     renderQuiz(); 
   });
   $(document).on("click", "#restart-quiz", function(event) {
@@ -195,8 +212,8 @@ function checkAnswerInput() {
     STORE.userScore = 0; 
     quizHomePage();
   });
-  renderQuiz(); 
-}; 
+  renderQuiz();  
+};
 
 // this re-renders the quiz page EVERY TIME the user interacts with a button and based on several checks.
 function renderQuiz() {
