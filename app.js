@@ -140,8 +140,8 @@ function renderAnswers() {
     });
 
     const infoTrackers =
-    `<p class = "question-tracker"> You are on Question ${STORE.questionNumber + 1} of 5. </p>
-     <p class = "score-tracker"> Curent score: ${STORE.userScore} out of 5. </p>`
+    `<p class = "question-tracker"> Question ${STORE.questionNumber + 1} of 5. </p>
+     <p class = "score-tracker"> Current Score: ${STORE.userScore} out of 5. </p>`
 
     const buttonHTML = 
     `<input type="button" id="next-question" aria-label="Next Question Button" value="Next Question"></input>
@@ -176,12 +176,12 @@ function checkAnswerInput() {
     questionIncrement();
     updateScore(); 
     buttonToggle();
-    $("#next-question").before(`<p class="correct">Nice job! You got it right! Your current score is ${STORE.userScore} out of 5.`);
+    $("#next-question").before(`<p class="correct">Correct! Your current score is ${STORE.userScore} out of 5.`);
   }
   else if (selectedAnswer !== STORE.questions[STORE.questionNumber].correctAnswer) {
     questionIncrement(); 
     buttonToggle(); 
-    $("#next-question").before(`<p class="incorrect">Sorry! That's incorrect. The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
+    $("#next-question").before(`<p class="incorrect">Not quite! The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
     Your current score is ${STORE.userScore} out of 5.`);
     }
   };
