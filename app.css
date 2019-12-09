@@ -11,31 +11,59 @@
 * { 
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif; 
+  cursor: pointer;
 }
 
-body {
-  margin: auto;
-  text-align: center; 
-  background-color: white;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a5/Map_of_USA_with_state_names.svg);
-  background-repeat: no-repeat; 
-  background-size: cover;
-}
 
-input[type="button"] {
-  text-align: center; 
-}
-
-/* @media screen and (min-width:320px) {
-  .main-container {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 150px; 
+/* starting point for phone view */
+@media screen and (min-width:320px) {
+  body {
+    margin: auto;
+    text-align: center; 
+    background-image: url(https://images.pexels.com/photos/1202723/pexels-photo-1202723.jpeg);
+    background-repeat: no-repeat; 
+    background-size: auto;
   }
-  .header-texts {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+  
+  #next-question, #submit-button, #show-results, #restart-quiz-button, #start-quiz {
+    text-align: center; 
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 24px;
   } 
-} */
+  
+  h1 {
+    font-size: 50px;
+    font-style: italic;
+    color: white;
+  }
+  
+  h2 {
+    font-size: 48px;
+    font-style: italic;
+    color: black;
+  }
+  
+  h3 {
+    font-size: 38px;
+    font-style: italic;
+    color: white;
+  }
+  
+  main {
+    font-size: 20px;
+  }
+  
+  input[type="radio"] {
+    vertical-align: middle;
+  }
+  
+  .main-container {
+    margin: auto;
+    background:#ffecdb;
+    opacity: 0.8;
+    border-radius: 100px;
+  }
+}

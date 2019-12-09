@@ -94,7 +94,6 @@ console.log('quizHomePage ran')
   <input type="button" id="start-quiz" aria-label="Start Page Button" value="Start Quiz"></input>
   </form>
   <br><br>
-  <img src="#" alt="Map of the United States"> 
   </main>`
 
 $('main').html(homePageHTML); 
@@ -118,41 +117,41 @@ function resultsPage() {
   
   <br>
   <br>
-  <img src="#" alt="Map of the United States"> 
   `
   $('main').html(resultsHTML);
   $('header').html(resultsHeader);
 };
 
-// this handles the HTML for the user's progress/score and acutal question text.
+// this handles the HTML for the question text.
 function questionInformation() {
   console.log('questionHeaders ran')
   const headers = 
   `<h3 class = "question-text">${STORE.questions[STORE.questionNumber].question}</h3>`
-  const questionTracker =
-  `<p class = "question-tracker"> You are on Question ${STORE.questionNumber + 1} of 5. </p>`;
-  const scoreTracker = 
-  `<p class = "score-tracker"> Your current score is ${STORE.userScore} out of 5. </p>`
-  $('header').html(headers + questionTracker + scoreTracker);
+  $('header').html(headers);
 }
 
-// this handles the HTML for the answers and buttons on every question page. 
+// this handles the HTML for the answers, buttons, and question/score tracker on the page. 
 function renderAnswers() {
     console.log('renderAnswersran');
 
     const answersHTML = STORE.questions[STORE.questionNumber].answers.map(answer => {
     return `
-    <input type="radio" name="answers" aria-label="Answer Selections" value="${answer}">${answer}
+    <input type="radio" name="answers" id="question-answers" aria-label="Answer Selections" value="${answer}">${answer}
     </input>
     <br><br>`
     });
+
+    const questionTracker =
+    `<p class = "question-tracker"> You are on Question ${STORE.questionNumber + 1} of 5. </p>`;
+    const scoreTracker = 
+    `<p class = "score-tracker"> Your current score is ${STORE.userScore} out of 5. </p>`
 
     const buttonHTML = 
     `<input type="button" id="next-question" aria-label="Next Question Button" value="Next Question"></input>
      <input type="button" id="submit-button" aria-label="Submit Answer Button" value="Submit Answer"></input>
      <input type="button" id="show-results"  aria-label="Show Results Button" value="See Results"></input>`
 
-    $('main').html(answersHTML.join('') + buttonHTML); 
+    $('main').html(answersHTML.join('') + scoreTracker + questionTracker + buttonHTML);
     $('#next-question').hide()
     $('#show-results').hide()
 };
