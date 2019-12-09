@@ -1,2 +1,2 @@
 # Quiz-App-FINALCK
-Quiz App Repo for Catrina and Kraig.
+This is the quiz app project of Catrina Fuentes and Kraig Williams. 
