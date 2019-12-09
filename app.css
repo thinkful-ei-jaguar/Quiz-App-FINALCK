@@ -8,24 +8,34 @@
 */
 
 
-/* { 
+* { 
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
 }
 
-@media screen and (min-width:320px) {
+body {
+  margin: auto;
+  text-align: center; 
+  background-color: white;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a5/Map_of_USA_with_state_names.svg);
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+input[type="button"] {
+  text-align: center; 
+}
+
+/* @media screen and (min-width:320px) {
   .main-container {
     display:flex;
     flex-direction: column;
     align-items: center;
-    /* padding-bottom: 150px; 
+    padding-bottom: 150px; 
   }
   .header-texts {
     display:flex;
     flex-direction: column;
     align-items: center;
   } 
-}
-
-body {
-  border: 50px solid blue;
 } */
