@@ -144,17 +144,16 @@ function renderAnswers() {
     <br><br>`
     });
 
-    const questionTracker =
-    `<p class = "question-tracker"> You are on: Question ${STORE.questionNumber + 1} of 5. </p>`;
-    const scoreTracker = 
-    `<p class = "score-tracker"> Your current score is: ${STORE.userScore} out of 5. </p>`
+    const infoTrackers =
+    `<p class = "question-tracker"> You are on Question ${STORE.questionNumber + 1} of 5. </p>
+     <p class = "score-tracker"> Curent score: ${STORE.userScore} out of 5. </p>`
 
     const buttonHTML = 
     `<input type="button" id="next-question" aria-label="Next Question Button" value="Next Question"></input>
      <input type="button" id="submit-button" aria-label="Submit Answer Button" value="Submit Answer"></input>
      <input type="button" id="show-results"  aria-label="Show Results Button" value="See Results"></input>`
 
-    $('main').attr('class', 'main-container').html(answersHTML.join('') + buttonHTML + scoreTracker + questionTracker)
+    $('main').attr('class', 'main-container').html(answersHTML.join('') + buttonHTML + infoTrackers);
     $('#next-question').hide()
     $('#show-results').hide()
 };
