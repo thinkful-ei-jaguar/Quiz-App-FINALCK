@@ -13,7 +13,8 @@
   font-family: 'Poppins', sans-serif; 
   cursor: pointer;
 }
-
+body{
+ background-size: 100% 100%;
 
 html {
   height: 100%; 
@@ -26,7 +27,7 @@ html {
     text-align: center; 
     background-image: url(https://images.pexels.com/photos/32307/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-repeat: repeat; 
-    background-size: 100% 100%;
+    
   }
   
   #next-question, #submit-button, #show-results, #restart-quiz-button, #start-quiz {
