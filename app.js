@@ -135,7 +135,7 @@ function renderAnswers() {
     const answersHTML = STORE.questions[STORE.questionNumber].answers.map(answer => {
     return `
     <form id = "answer-form">
-    <input type="radio" name="answers" id="question-answers" aria-label="Answer Selections" value="${answer}">${answer}</input>
+    <input type="radio" name="answers" aria-label="Answer Selections" value="${answer}">${answer}</input>
     <br><br>`
     });
 
