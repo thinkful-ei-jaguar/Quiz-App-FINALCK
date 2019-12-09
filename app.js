@@ -182,7 +182,7 @@ function checkAnswerInput() {
     questionIncrement(); 
     buttonToggle(); 
     $("#next-question").before(`<p class="incorrect">Not quite! The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
-    Your current score is ${STORE.userScore} out of 5.`);
+    Your score is now ${STORE.userScore} out of 5.`);
     }
   };
 
