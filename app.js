@@ -124,7 +124,6 @@ function resultsPage() {
 
 // this handles the HTML for the question text.
 function questionInformation() {
-  console.log('questionInformation ran')
   const headers = 
   `<h3 class = "question-text">${STORE.questions[STORE.questionNumber].question}</h3>`
   $('header').html(headers);
@@ -135,18 +134,20 @@ function renderAnswers() {
 
     const answersHTML = STORE.questions[STORE.questionNumber].answers.map(answer => {
     return `
+    <form id = "answer-form">
     <input type="radio" name="answers" id="question-answers" aria-label="Answer Selections" value="${answer}">${answer}</input>
     <br><br>`
     });
 
-    const infoTrackers =
-    `<p class = "question-tracker"> Question ${STORE.questionNumber + 1} of 5. </p>
-     <p class = "score-tracker"> Current Score: ${STORE.userScore} out of 5. </p>`
-
     const buttonHTML = 
     `<input type="button" id="next-question" aria-label="Next Question Button" value="Next Question"></input>
      <input type="button" id="submit-button" aria-label="Submit Answer Button" value="Submit Answer"></input>
-     <input type="button" id="show-results"  aria-label="Show Results Button" value="See Results"></input>`
+     <input type="button" id="show-results"  aria-label="Show Results Button" value="See Results"></input>
+     </form>`
+
+    const infoTrackers =
+    `<p class = "question-tracker"> Question ${STORE.questionNumber + 1} of 5 </p>
+     <p class = "score-tracker"> Current Score: ${STORE.userScore} out of 5 </p>`
 
     $('main').attr('class', 'main-container').html(answersHTML.join('') + buttonHTML + infoTrackers);
     $('#next-question').hide()
