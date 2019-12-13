@@ -68,7 +68,7 @@ html {
   }
   
   .main-container {
-    margin: auto;
+    margin: 10%;
     background:#ffecdb;
     opacity: 0.8;
     border-radius: 90px;
