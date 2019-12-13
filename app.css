@@ -10,7 +10,8 @@
 html {
   height: 100%; 
 }
-form {
+
+.main-container{
 margin-bottom:20%;
 }
 
@@ -53,7 +54,7 @@ margin-bottom:20%;
     color: white;
   }
   
-  h2 {
+  h2 
     font-size: 32px;
     font-style: italic;
     color: white;
