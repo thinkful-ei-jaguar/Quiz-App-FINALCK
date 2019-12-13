@@ -82,9 +82,9 @@ function quizHomePage() {
   `<header role="banner">
   <h1> State Quiz App </h1>
   </header>
-  <br><br>
+  
   <h2 class ="title-2"> Do you know your state capitals? </h2>
-  <br>
+  
   <h3 class ="title-3"> Let's find out! </h3>`
   
   const homePageHTML = 
@@ -113,9 +113,8 @@ function resultsPage() {
   </input>
   </form>
   
-  <br>
-  <br>
-  <br>
+  
+
   `
   $('main').html(resultsHTML);
   $('main').attr("class", "");
