@@ -10,6 +10,11 @@
 html {
   height: 100%; 
 }
+form {
+margin-bottom:20%;
+}
+
+
 
 @media screen and (min-width:320px) {
   body {
