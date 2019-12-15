@@ -134,7 +134,7 @@ function renderAnswers() {
     const answersHTML = STORE.questions[STORE.questionNumber].answers.map(answer => {
     return `
     <form id = "answer-form">
-    <input type="radio" name="answers" aria-label="Answer Selections" value="${answer}">${answer}</input>
+    <input id="answer-choices" type="radio" name="answers" aria-label="Answer Selections" value="${answer}">${answer}</input>
     <br><br>`
     });
 
@@ -171,7 +171,7 @@ function checkAnswerInput() {
   const selectedAnswer = $("input[name='answers']:checked").val();
   if (selectedAnswer === undefined) { 
     $("#next-question").before(`<p class="no-answer">Please select an answer.</p>`);
-  }
+  } 
   else if (selectedAnswer === STORE.questions[STORE.questionNumber].correctAnswer) {
     questionIncrement();
     updateScore(); 
