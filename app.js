@@ -133,7 +133,7 @@ function renderAnswers() {
 
     const answersHTML = STORE.questions[STORE.questionNumber].answers.map(answer => {
     return `
-    <form id = "answer-form">
+   
     <input id="answer-choices" type="radio" name="answers" aria-label="Answer Selections" value="${answer}">${answer}</input>
     <br><br>`
     });
@@ -148,7 +148,7 @@ function renderAnswers() {
     `<p class = "question-tracker"> Question ${STORE.questionNumber + 1} of 5 </p>
      <p class = "score-tracker"> Current Score: ${STORE.userScore} out of 5 </p>`
 
-    $('main').attr('class', 'main-container').html(`<form id = "answer-form"> <fieldset>` + answersHTML.join('') + "</fieldset>c"+ buttonHTML + infoTrackers);
+    $('main').attr('class', 'main-container').html(`<form id = "answer-form"> <fieldset>` + answersHTML.join('') + `</fieldset`+ buttonHTML + infoTrackers);
     $('#next-question').hide()
     $('#show-results').hide()
 };
