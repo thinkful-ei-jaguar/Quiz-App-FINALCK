@@ -22,11 +22,16 @@ align-items: center;
   text-align:center;
 }
 
-input[type=radio] * {
+/*input[type=radio]  {
   color:red;
+}*/
+
+fieldset{
+  
+  border:none;
+  text-align:left;
+margin-left:40%;
 }
-
-
 
 
 #correct{
