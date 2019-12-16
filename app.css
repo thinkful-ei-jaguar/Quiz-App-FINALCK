@@ -3,7 +3,7 @@
 
 * { 
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Open Sans', sans-serif;
   
 }
 
@@ -16,12 +16,17 @@ margin-bottom:10%;
 
 }
 
+header,h1,h2,h2,.question-text{
+  font-family: 'Poppins', sans-serif; 
+}
+
 
 #next-question:hover, #submit-button:hover, #show-results:hover, #restart-quiz-button:hover, #start-quiz:hover{
   color:purple;
 }
 
 fieldset{
+  
   border:none;
 text-align:left;
 margin-left:20%;
@@ -107,12 +112,17 @@ margin-top:5%;
     margin-left: 50px;
     margin-right: 50px;
   }
+  .title-2{
+    margin-top:10%;
+  }
+
+  fieldset{
+    margin-left:40%;
+  }
+  
 
 }
 
-fieldset{
-  margin-left:40%;
-}
 
 @media screen and (min-width:1024px) {
   h1 {

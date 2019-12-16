@@ -4,7 +4,7 @@ const STORE = {
     {
 
       question: 'What is the Capital of Florida?',
-      id: 1,
+      
       answers: [
         'Orlando',
         'Miami',
@@ -15,7 +15,7 @@ const STORE = {
     },
     {
       question: 'What is the Capital of California?',
-      id: 2,
+      
       answers: [
         'Los Angeles',
         'San Diego',
@@ -26,7 +26,7 @@ const STORE = {
     },
     {
       question: 'What is the Capital of Texas?',
-      id: 3,
+
       answers: [
         'Austin',
         'Dallas',
@@ -37,7 +37,7 @@ const STORE = {
     },
     {
       question: 'What is the Capital of Massachusetts?',
-      id: 4,
+      
       answers: [
         'Salem',
         'Boston',
@@ -48,7 +48,7 @@ const STORE = {
     },
     {
       question: 'What is the Capital of New York?',
-      id: 5,
+      
       answers: [
         'New York',
         'Albany',
@@ -83,9 +83,9 @@ function quizHomePage() {
   <h1> State Quiz App </h1>
   </header>
   
-  <h2 class ="title-2"> Do you know your state capitals? </h2>
   
-  <h3 class ="title-3"> Let's find out! </h3>`
+  
+  <h3 class ="title-2"><p>Do you know you state capitals?<p>  <p>Let's find out! <p> </h3>`
   
   const homePageHTML = 
   `<main id = "home-page">
@@ -124,7 +124,7 @@ function resultsPage() {
 // this handles the HTML for the question text.
 function questionInformation() {
   const headers = 
-  `<h3 class = "question-text">${STORE.questions[STORE.questionNumber].question}</h3>`
+  `<h3 class = "question-text">${STORE.questions[STORE.questionNumber].question}</h3>`;
   $('header').html(headers);
 }
 
@@ -134,7 +134,8 @@ function renderAnswers() {
     const answersHTML = STORE.questions[STORE.questionNumber].answers.map(answer => {
     return `
    
-    <input type="radio" name="answers" aria-label="Answer Selections" value="${answer}">${answer}</input>
+    <input type="radio" name="answers" aria-label="Answer Selections" value="${answer}"></input>
+    <label for="${answer}">${answer}</label> 
     <br><br>`
     });
 
