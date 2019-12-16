@@ -19,9 +19,8 @@ margin-bottom:10%;
 
 
 fieldset{
-  
   border:none;
-  text-align:left;
+text-align:left;
 margin-left:20%;
 }
 
@@ -106,9 +105,9 @@ margin-left:20%;
 
 }
 
-fieldset{
+/*fieldset{
   margin-left:40%;
-}
+}*/
 
 @media screen and (min-width:1024px) {
   h1 {
