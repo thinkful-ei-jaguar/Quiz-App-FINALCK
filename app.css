@@ -113,9 +113,11 @@ margin-top:3%;
     font-size: 18px;
   }
 
-  #incorrect{
-    text-align: center;
+  .incorrect,.correct,.no-answer{
+    
+    color:blue;
   }
+  
   
   
   .main-container {
