@@ -15,6 +15,9 @@ html {
 margin-bottom:5%;
 
 }
+#home-page{
+  margin-top:30px;
+}
 
 h1,h2,h3{
   padding-top:5px;
@@ -25,12 +28,12 @@ header,h1,h2,.question-text{
   font-family: 'Poppins', sans-serif; 
   
 }
-#next-question, #restart-quiz-button{
+#next-question, #show-results, #restart-quiz-button{
 margin-top:5px;
 }
-#show-results{
-  margin-top:20px;
-}
+
+  
+
 #next-question:hover, #submit-button:hover, #show-results:hover, #restart-quiz-button:hover, #start-quiz:hover{
   color:purple;
   transform: scale(1.2); 

@@ -79,22 +79,19 @@ function updateScore() {
 function quizHomePage() {
 
   const homeHeaderHTML= 
-  `<header role="banner">
+  `
   <h1> State Quiz App </h1>
-  </header>
-  
-  
-  
-  <h3 class ="title-2"><p>Do you know you state capitals?</p>  <p>Let's find out! </p> </h3>`
+
+  <h2 class ="title-2"><p>Do you know your state capitals?</p>  <p>Let's find out! </p> </h2>`
   
   const homePageHTML = 
-  `<main id = "home-page">
+  `
   <form id = "start-page">
   <input type="button" id="start-quiz" aria-label="Start Page Button" value="Start Quiz"></input>
   </form>
   <br><br><br>
   </main>`
-
+$('main').attr("id", "home-page");
 $('main').html(homePageHTML); 
 $('header').html(homeHeaderHTML);
 };
@@ -102,10 +99,10 @@ $('header').html(homeHeaderHTML);
 // this handles the HTML for the results page. 
 function resultsPage() {
   const resultsHeader =  
-  `<header role ="banner">
+  `
   <h1 id='results-header'>Results</h1>
   <h2>Your final score was ${STORE.userScore} out of 5!</h2>
-  </header>`
+  `
 
   const resultsHTML = `
   <form id = "restart-quiz">
