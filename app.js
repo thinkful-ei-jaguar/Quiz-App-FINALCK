@@ -146,7 +146,7 @@ function renderAnswers() {
     `<p class = "question-tracker"> Question ${STORE.questionNumber + 1} of 5 </p>
      <p class = "score-tracker"> Current Score: ${STORE.userScore} out of 5 </p>`
 
-    $('main').attr('class', 'main-container').html(`<form aria-live"polite" id = "answer-form"> <fieldset>` + answersHTML.join('') + `</fieldset> </form>`+ buttonHTML + infoTrackers);
+    $('main').attr('class', 'main-container').html(`<form aria-live="polite" id = "answer-form"> <fieldset>` + answersHTML.join('') + `</fieldset> </form>`+ buttonHTML + infoTrackers);
     $('#next-question').hide()
     $('#show-results').hide()
 };
