@@ -85,7 +85,7 @@ function quizHomePage() {
   
   
   
-  <h3 class ="title-2"><p>Do you know you state capitals?<p>  <p>Let's find out! <p> </h3>`
+  <h3 class ="title-2"><p>Do you know you state capitals?</p>  <p>Let's find out! </p> </h3>`
   
   const homePageHTML = 
   `<main id = "home-page">
@@ -103,7 +103,7 @@ $('header').html(homeHeaderHTML);
 function resultsPage() {
   const resultsHeader =  
   `<header role ="banner">
-  <h1>Results</h1>
+  <h1 id='results-header'>Results</h1>
   <h2>Your final score was ${STORE.userScore} out of 5!</h2>
   </header>`
 

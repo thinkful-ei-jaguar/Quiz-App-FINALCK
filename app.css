@@ -19,20 +19,26 @@ margin-bottom:5%;
 h1,h2,h3{
   padding-top:5px;
   padding-bottom:5px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 header,h1,h2,.question-text{
   font-family: 'Poppins', sans-serif; 
   
 }
-#next-question{
+#next-question, #restart-quiz-button{
 margin-top:5px;
 }
-
+#show-results{
+  margin-top:20px;
+}
 #next-question:hover, #submit-button:hover, #show-results:hover, #restart-quiz-button:hover, #start-quiz:hover{
   color:purple;
+  transform: scale(1.2); 
 }
 
+.no-answer{
+  margin-bottom:5px;
+}
 fieldset{
   
   border:none;
