@@ -17,6 +17,9 @@ margin-bottom:10%;
 }
 
 
+#next-question:hover, #submit-button:hover, #show-results:hover, #restart-quiz-button:hover, #start-quiz:hover{
+  color:purple;
+}
 
 fieldset{
   border:none;
