@@ -146,7 +146,7 @@ function renderAnswers() {
     `<p class = "question-tracker"> Question ${STORE.questionNumber + 1} of 5 </p>
      <p class = "score-tracker"> Current Score: ${STORE.userScore} out of 5 </p>`
 
-    $('main').attr('class', 'main-container').html(`<form id = "answer-form"> <fieldset>` + answersHTML.join('') + `</fieldset> </form>`+ buttonHTML + infoTrackers);
+    $('main').attr('class', 'main-container').html(`<form aria-live"polite" id = "answer-form"> <fieldset>` + answersHTML.join('') + `</fieldset> </form>`+ buttonHTML + infoTrackers);
     $('#next-question').hide()
     $('#show-results').hide()
 };
@@ -174,12 +174,12 @@ function checkAnswerInput() {
     questionIncrement();
     updateScore(); 
     buttonToggle();
-    $("#next-question").before(`<p class="correct">Correct! Your current score is ${STORE.userScore} out of 5.`);
+    $("#next-question").before(`<p aria-live"polite" class="correct">Correct! Your current score is ${STORE.userScore} out of 5.`);
   }
   else if (selectedAnswer !== STORE.questions[STORE.questionNumber].correctAnswer) {
     questionIncrement(); 
     buttonToggle(); 
-    $("#next-question").before(`<p class="incorrect">Not quite! The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
+    $("#next-question").before(`<p aria-live"polite" class="incorrect">Not quite! The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
     Your score is now ${STORE.userScore} out of 5.`);
     }
   };
