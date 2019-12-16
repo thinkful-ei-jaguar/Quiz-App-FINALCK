@@ -22,7 +22,7 @@ fieldset{
   border:none;
 text-align:left;
 margin-left:20%;
-color:green;
+
 margin-top:5%;
 }
 
@@ -124,7 +124,5 @@ fieldset{
   main {
     font-size: 28px;
   }
-  fieldset{
-    color:purple;
-  }
+
 }
