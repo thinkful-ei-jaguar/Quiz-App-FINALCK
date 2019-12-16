@@ -30,11 +30,13 @@ fieldset{
   border:none;
 text-align:left;
 margin-left:30%;
-margin-top:10%;
+margin-top:3%;
+
 
 }
-
-
+.main-container{
+  padding-bottom:20px;
+}
 
 
 
