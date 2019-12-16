@@ -12,14 +12,22 @@ html {
 }
 
 .main-container{
-margin-bottom:10%;
+margin-bottom:5%;
 
 }
 
-header,h1,h2,h2,.question-text{
+h1,h2,h3{
+  padding-top:5px;
+  padding-bottom:5px;
+  font-weight: bold;
+}
+header,h1,h2,.question-text{
   font-family: 'Poppins', sans-serif; 
+  
 }
-
+#next-question{
+margin-top:5px;
+}
 
 #next-question:hover, #submit-button:hover, #show-results:hover, #restart-quiz-button:hover, #start-quiz:hover{
   color:purple;
@@ -135,10 +143,11 @@ margin-top:3%;
     font-size: 52px;
   }
   h3 {
-    font-size: 48px; 
+    font-size: 40px; 
   }
   main {
     font-size: 28px;
+    font-weight: lighter;
   }
 
 }
