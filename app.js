@@ -174,12 +174,12 @@ function checkAnswerInput() {
     questionIncrement();
     updateScore(); 
     buttonToggle();
-    $("#next-question").before(`<p aria-live"polite" class="correct">Correct! Your current score is ${STORE.userScore} out of 5.`);
+    $("#next-question").before(`<p aria-live"=polite" class="correct">Correct! Your current score is ${STORE.userScore} out of 5.`);
   }
   else if (selectedAnswer !== STORE.questions[STORE.questionNumber].correctAnswer) {
     questionIncrement(); 
     buttonToggle(); 
-    $("#next-question").before(`<p aria-live"polite" class="incorrect">Not quite! The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
+    $("#next-question").before(`<p aria-live="polite" class="incorrect">Not quite! The correct answer is ${STORE.questions[STORE.questionNumber -1].correctAnswer}.  
     Your score is now ${STORE.userScore} out of 5.`);
     }
   };
