@@ -89,7 +89,7 @@ function quizHomePage() {
   <form id = "start-page">
   <input type="button" id="start-quiz" aria-label="Start Page Button" value="Start Quiz"></input>
   </form>
-  <br><br><br>
+  
   </main>`
 $('main').attr("id", "home-page");
 $('main').html(homePageHTML); 
