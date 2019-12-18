@@ -131,9 +131,8 @@ function renderAnswers() {
     const answersHTML = STORE.questions[STORE.questionNumber].answers.map(answer => {
     return `
    
-    <input type="radio" name="answers" aria-label="Answer Selections" value="${answer}"></input>
-    <label for="${answer}">${answer}</label> 
-    <br><br>`
+    <li><input type="radio" name="answers" aria-label="Answer Selections" value="${answer}"></input>
+    <label for="${answer}">${answer}</label> </li>`
     });
 
     const buttonHTML = 
@@ -146,7 +145,7 @@ function renderAnswers() {
     `<p aria-live= "polite" class = "question-tracker"> Question ${STORE.questionNumber + 1} of 5 </p>
      <p aria-live="polite" class = "score-tracker"> Current Score: ${STORE.userScore} out of 5 </p>`
 
-    $('main').attr('class', 'main-container').html(`<form aria-live="polite" id = "answer-form"> <fieldset>` + answersHTML.join('') + `</fieldset> </form>`+ buttonHTML + infoTrackers);
+    $('main').attr('class', 'main-container').html(`<form aria-live="polite" id = "answer-form"> <fieldset><ul>` + answersHTML.join('') + `</ul></fieldset> </form>`+ buttonHTML + infoTrackers);
     $('#next-question').hide()
     $('#show-results').hide()
 };
