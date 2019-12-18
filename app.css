@@ -31,7 +31,9 @@ header,h1,h2,.question-text{
 #next-question, #show-results, #restart-quiz-button{
 margin-top:5px;
 }
-
+ul {
+  list-style-type: none;
+ }
   
 
 #next-question:hover, #submit-button:hover, #show-results:hover, #restart-quiz-button:hover, #start-quiz:hover{
